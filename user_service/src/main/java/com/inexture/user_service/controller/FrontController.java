@@ -24,7 +24,7 @@ public class FrontController {
     @RequestMapping("{uid}")
     public UserBean getUser(@PathVariable int uid){
         UserBean userBean = userService.getUser(uid);
-        List<AddressBean> addlist = this.restTemplate.getForObject("http://ADDRESS-SERVICE/address/"+uid,List.class);
+        List<AddressBean> addlist = this.restTemplate.getForObject("http://Address-Service/address/"+uid,List.class);
 
         userBean.setAddressBeanList(addlist);
 
