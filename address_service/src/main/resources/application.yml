@@ -1,9 +1,13 @@
 server:
   port: 8002
-#
-#spring:
-#  application:
-#    name: Address-Service
+
+spring:
+  application:
+    name: Address-Service
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8123
 #
 #
 #eureka:
@@ -12,8 +16,5 @@ server:
 #  client:
 #    register-with-eureka: true
 #    fetch-registry: true
-spring:
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8123
+#spring:
+#
